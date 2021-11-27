@@ -9,6 +9,8 @@ nav.navbar.navbar-default.navbar-fixed-top.navbar-custom
             a(class="navbar-brand", href=url_for())= config.title
         #main-navbar.collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right
+                li
+                    include search
                 each value, key in theme["navbar-links"]
                     li
                         a(href=url_for(value))!= key
