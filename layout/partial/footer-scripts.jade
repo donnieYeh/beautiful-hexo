@@ -2,10 +2,14 @@ script(src="//cdn.bootcss.com/jquery/1.11.2/jquery.min.js")
 script(src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js")
 script(src=url_for("/js/main.js"))
 
+// 代码高亮
 if !config.highlight.enable
     script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.3/highlight.min.js") 
     script hljs.highlightAll();
 
+// 导航栏搜索框
 include search-script
 
 include google_analytics
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

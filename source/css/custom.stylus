@@ -1,2 +1,23 @@
 @import url(search.css);
 @import url(highlight.css);
+
+// 引用栏样式
+blockquote
+    background: rgba(255,255,255,0.3);
+    border-left-color: rgba(128,128,128,0.3);
+    font-size: 14px;s
+
+.site_counter
+    text-align: center
+    margin-top: 10px
+    color: #999
+
+.meta-devider
+    margin: 0 0.5em
+
+// copyright author icon
+.with-love
+    margin: 0 5px
+
+.site_counter .theme-by
+    margin-left: 50px

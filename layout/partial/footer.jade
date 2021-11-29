@@ -11,9 +11,19 @@ footer
                                         i.fa.fa-circle.fa-stack-2x
                                         i.fa.fa-stack-1x.fa-inverse(class=item.icon)
                 - var year = new Date().getFullYear();
-                p.copyright.text-muted.
-                    © #{config.author} • #{year} • #[a(href="mailto:" + config.email)= config.email]
-
-                p.theme-by.text-muted.
-                    Theme by
-                    #[a(href="https://github.com/twoyao/beautiful-hexo") beautiful-hexo]
+                p.copyright.text-muted
+                    span © #{year}
+                    span.meta-devider •
+                    span.with-love
+                        i.fa.fa-user
+                    span #{config.author}
+                p.site_counter
+                    if theme.site_counter.show
+                        <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+                        span.meta-devider |
+                        <span id="busuanzi_container_page_pv">本页访问量<span id="busuanzi_value_page_pv"></span>次</span>
+                        span.meta-devider |
+                        <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>次</span>
+                    span.theme-by.text-muted.
+                        Theme base on
+                            #[a(href="https://github.com/twoyao/beautiful-hexo") beautiful-hexo]
