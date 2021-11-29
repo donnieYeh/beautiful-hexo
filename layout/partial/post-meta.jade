@@ -1,10 +1,21 @@
-mixin post_meta(date, tags)
+mixin post_meta(date, tags, showviews)
     p.post-meta Posted on #{full_date(date, "MMM D YYYY")}
-      if tags
-        - tags.each(function(tag) {
-            = ' · '
-            a.tag.post-meta(href=url_for(tag.path))= tag.name
-        - })
+      if showviews
+        if theme.site_counter.show
+          span.post-meta-group
+            span#busuanzi_container_page_pv 
+              span.with-love 
+                  i.fa.fa-eye 
+              span 阅读次数：
+              span#busuanzi_value_page_pv
+      if tags && tags.length > 0
+        span.post-meta-group
+          span.with-love 
+            i.fa.fa-tag
+          - tags.each(function(tag) {
+              = ' · '
+              a.tag.post-meta(href=url_for(tag.path))= tag.name
+          - })
 
 
 

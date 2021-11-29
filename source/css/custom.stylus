@@ -21,3 +21,7 @@ blockquote
 
 .site_counter .theme-by
     margin-left: 50px
+
+
+.post-meta-group
+    margin-left: 20px
