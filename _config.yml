@@ -38,27 +38,27 @@ footer:
     link: 'http://weibo.com/bisyao?is_all=1'
     title: Weibo
     icon: fa-weibo
-    enable: true
+    enable: false
   github:
     link: 'https://github.com/twoyao'
     title: GitHub
     icon: fa-github
-    enable: true
+    enable: false
   rss:
     link: '/atom.xml'
     title: RSS
     icon: fa-rss
-    enable: true
+    enable: false
   twitter:
     link: 'https://twitter.com/twoyao_'
     title: Twitter
     icon: fa-twitter
-    enable: true
+    enable: false
   mail:
     link: 'mailto:bisyao@gmail.com'
     title: Email me
     icon: fa-envelope
-    enable: true
+    enable: false
   linkin:
     link: # your link here e.g. http...
     title: LinkedIn
