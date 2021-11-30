@@ -4,7 +4,7 @@ var titleTime;
 document.addEventListener('visibilitychange', function () {
     if (document.hidden) {
         $('[rel="icon"]').attr('href', "/img/TEP.ico");
-        document.title = '☀发呆中！';
+        document.title = '☀发呆中...';
         clearTimeout(titleTime);
     }
     else {
