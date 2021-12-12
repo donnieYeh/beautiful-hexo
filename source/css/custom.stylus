@@ -30,3 +30,9 @@ code {
     background: rgb(196,241,255);
     color: rgb(81,131,255);
 }
+
+// 文章图片阴影
+.blog-post img {
+    box-shadow: 10px 10px 15px rgb(133 133 133);
+    margin: 20px 0 30px 0;
+}
