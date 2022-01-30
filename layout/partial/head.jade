@@ -13,8 +13,8 @@ block description
 
 link(rel="alternate", type="application/rss+xml", title=config.title, href=url_for("/atom.xml"))
 
-link(rel="stylesheet", href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css")
-link(rel="stylesheet", href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css")
+link(rel="stylesheet", href="//cdn.jsdelivr.net/npm/font-awesome@4.5.0/css/font-awesome.min.css")
+link(rel="stylesheet", href="//cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css")
 link(rel="stylesheet", href=url_for("/css/main.css"))
 
 if theme.highlight.enable
@@ -39,3 +39,5 @@ if theme.comment.enable == "facebook"
     //- Remember to set the description that you want at your post header (fb_og_description)!
     //- Or you can use either config.description or theme.header.motto (It's up to you)
     meta(property="og:description", content=page.fb_og_description ? page.fb_og_description : config.description)
+
+script(src="https://hm.baidu.com/hm.js?3ff1b36ec1db8f13ab171ad6262f0cc6") 
