@@ -2,14 +2,19 @@ include word-count
 
 mixin post_meta(date, tags, showviews)
     p.post-meta Posted on #{full_date(date, "MMM D YYYY")}
-      if showviews
+      if !showviews 
+          if tags && tags.length > 0
+            +show_tags(tags)
+    if showviews
+      p.post-meta
         if theme.word_count
           +word_count
           +min2read
         if theme.site_counter
           +site_counter
-      if tags && tags.length > 0
-        +show_tags(tags)
+      p.post-meta
+        if tags && tags.length > 0
+          +show_tags(tags)
 
 
 mixin site_counter 
@@ -21,10 +26,12 @@ mixin site_counter
       span#busuanzi_value_page_pv
 
 mixin show_tags(tags)
-  span.post-meta-group
+  span
     span.with-love 
       i.fa.fa-tag
-    - tags.each(function(tag) {
-        = ' · '
+    - tags.forEach(function(tag,index) {
+    -   if (index != 0){
+        = ', '
+    -   }
         a.tag.post-meta(href=url_for(tag.path))= tag.name
     - })
