@@ -1,0 +1,14 @@
+mixin word_count
+  span.post-meta-group
+    span.with-love 
+      i.fa.fa-keyboard-o
+    span.post-meta-item-text   文章字数: 
+    span.post-count= wordcount(page.content)
+    span.post-meta-item-text 字
+mixin min2read
+  span.post-meta-group
+    span.with-love 
+      i.fa.fa-hourglass-half
+    span.post-meta-item-text   阅读时长: 
+    span.post-count= min2read(page.content)
+    span.post-meta-item-text min
